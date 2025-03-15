@@ -84,7 +84,7 @@ const Ranking = () => {
     // 백엔드 API에서 랭킹 데이터 가져오기
     const fetchRanking = async () => {
       try {
-        const response = await fetch("http://localhost:8000/ranking"); 
+        const response = await fetch("http://192.168.0.12:8000/ranking"); 
         const data = await response.json();
         setWinners(data);
       } catch (error) {

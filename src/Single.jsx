@@ -102,12 +102,12 @@ export default function Single() {
     formData.append("file", file);
 
     try {
-      const res = await axios.post("http://localhost:8000/upload/", formData, {
+      const res = await axios.post("http://192.168.0.12:8000/upload/", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
       setChar(file.name);
-      setCharUrl(`http://localhost:8000/uploads/${res.data.filename}`);
+      setCharUrl(`http://192.168.0.12:8000/uploads/${res.data.filename}`);
     } catch (error) {
       console.error("파일 업로드 실패:", error);
     }
@@ -115,7 +115,7 @@ export default function Single() {
 
   const startBattle = async () => {
     try {
-      const res = await axios.post("http://localhost:8000/battle/", {
+      const res = await axios.post("http://192.168.0.12:8000/battle/", {
         players: [char1, char2], 
       });
       const winner = res.data.winner === char1 ? "Player 1" : "Player 2";

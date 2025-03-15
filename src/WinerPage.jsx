@@ -118,7 +118,7 @@ export default function WinnerPage() {
       }
   
       try {
-        const response = await fetch("http://localhost:8000/save_character/", {
+        const response = await fetch("http://192.168.0.12:8000/save_character/", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -154,7 +154,7 @@ export default function WinnerPage() {
       }
   
       try {
-        const response = await fetch("http://localhost:8000/save_character/", {
+        const response = await fetch("http://192.168.0.12:8000/save_character/", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

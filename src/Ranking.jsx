@@ -81,7 +81,6 @@ const Ranking = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // 백엔드 API에서 랭킹 데이터 가져오기
     const fetchRanking = async () => {
       try {
         const response = await fetch("http://192.168.0.12:8000/ranking"); 

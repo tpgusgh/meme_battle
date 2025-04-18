@@ -83,7 +83,7 @@ const Ranking = () => {
   useEffect(() => {
     const fetchRanking = async () => {
       try {
-        const response = await fetch("http://localhost:8000/ranking");  //변경해야함 로컬임
+        const response = await fetch("https://port-0-fastapi-m8axs0yud99a54dd.sel4.cloudtype.app:8000/ranking");  //변경해야함 로컬임
 
         const data = await response.json();
         setWinners(data);

@@ -74,7 +74,7 @@ async def save_character(character: Character):
                            (character.name, character.wins, character.img_url))
 
         db.commit()
-        return {"message": "Character saved successfully!"}
+        return {"message": "Character saved successfull!"}
 
     except sqlite3.Error as e:
         db.rollback()
